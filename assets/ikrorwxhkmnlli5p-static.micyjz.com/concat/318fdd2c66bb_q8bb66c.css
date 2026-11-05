@@ -1,0 +1,218 @@
+
+
+        #listRowSettingContainer_ .dynamic-list-container{
+            --prodlist-nums:4;
+            --layoutLeftRight: 20px;
+            --layoutTopBottom: 20px;
+        }
+        @media(max-width: 1024px){
+            #listRowSettingContainer_ .dynamic-list-container{
+                --prodlist-nums:3;
+                --layoutLeftRight: 10px;
+                --layoutTopBottom: 10px;
+            }
+        }
+        @media (max-width: 767px){
+            #listRowSettingContainer_ .dynamic-list-container{
+                --prodlist-nums:1;
+                --layoutLeftRight: 0px;
+                --layoutTopBottom: 10px;
+            }
+        }
+    
+.sitewidget-form-20261014143925-NJpFemHbYtkS #formsubmit{ pointer-events: none; }
+.sitewidget-form-20261014143925-NJpFemHbYtkS #formsubmit.releaseClick{ pointer-events: unset; }
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .form-horizontal input,.sitewidget-form-20261014143925-NJpFemHbYtkS .form-horizontal span:not(.select2-selection--single),.sitewidget-form-20261014143925-NJpFemHbYtkS .form-horizontal label,.sitewidget-form-20261014143925-NJpFemHbYtkS .form-horizontal .form-builder button{height:22px !important;line-height:22px !important;}
+.sitewidget-form-20261014143925-NJpFemHbYtkS .uploadBtn{padding:4px 15px !important;height:22px !important;line-height:22px !important;}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS select, .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="text"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="password"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="datetime"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="datetime-local"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="date"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="month"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="time"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="week"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="number"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="email"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="url"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="search"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="tel"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="color"], .sitewidget-form-20261014143925-NJpFemHbYtkS .uneditable-input{height:22px !important;}
+.sitewidget-form-20261014143925-NJpFemHbYtkS.sitewidget-inquire .control-group .controls .select2-container .select2-selection--single .select2-selection__rendered{height:22px !important;line-height:22px !important;}
+.sitewidget-form-20261014143925-NJpFemHbYtkS textarea.cus-message-input{min-height:22px !important;}
+.sitewidget-form-20261014143925-NJpFemHbYtkS .add-on, .sitewidget-form-20261014143925-NJpFemHbYtkS .add-on{height:22px !important;line-height:22px !important;}
+
+	.sitewidget-form-20261014143925-NJpFemHbYtkS textarea, .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="text"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="password"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="datetime"],
+	.sitewidget-form-20261014143925-NJpFemHbYtkS input[type="datetime-local"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="date"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="month"],
+	.sitewidget-form-20261014143925-NJpFemHbYtkS input[type="time"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="week"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="number"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="email"],
+	.sitewidget-form-20261014143925-NJpFemHbYtkS input[type="url"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="search"], .sitewidget-form-20261014143925-NJpFemHbYtkS input[type="tel"],
+	.sitewidget-form-20261014143925-NJpFemHbYtkS input[type="color"], .sitewidget-form-20261014143925-NJpFemHbYtkS .uneditable-input {
+		box-shadow: none ;
+	}
+
+
+
+	/**
+	* 输入框校验触发后背景颜色
+	*/
+	.sitewidget-form-20261014143925-NJpFemHbYtkS .input-valid-bg {
+	background: #ffece8 !important;
+	outline: none;
+	}
+
+	.sitewidget-form-20261014143925-NJpFemHbYtkS .input-valid-bg:focus {
+		background: #fff !important;
+		border: 1px solid #f53f3f !important;
+	}
+.sitewidget-form-20261014143925-NJpFemHbYtkS #formsubmit{
+		border:0px solid #2e6da4;
+		border-radius:4px;
+		background:var(--ld-main1,#337ab7);
+		color:#fff;
+		font-size:16px;
+		width:246px;
+		height:34px;
+		}
+	.sitewidget-form-20261014143925-NJpFemHbYtkS #formsubmit:hover{
+		border:0px solid #204d74;
+		border-radius:4px;
+		background:var(--ld-main1,#286090);
+		color:#fff;
+		font-size:16px;
+	}
+
+	.sitewidget-form-20261014143925-NJpFemHbYtkS #formreset{
+		width:246px;
+		font-size:16px;
+		height:34px;
+	}
+	.sitewidget-form-20261014143925-NJpFemHbYtkS #formreset:hover{
+		font-size:16px;
+	}
+.sitewidget-form-20261014143925-NJpFemHbYtkS .submitGroup .controls{
+	text-align:left;
+	}
+/* 下拉复选框开始 */
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-parent label {
+
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-parent input[type='checkbox']+label:before {
+content: "";
+display: inline-block;
+width: 12px;
+height: 12px;
+border: 1px solid #888;
+border-radius: 3px;
+margin-right: 6px;
+margin-left: 6px;
+transition-duration: .2s;
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-parent input[type='checkbox']:checked+label:before {
+width: 50%;
+border-color: #888;
+border-left-color: transparent;
+border-top-color: transparent;
+-webkit-transform: rotate(45deg) translate(1px, -4px);
+transform: rotate(45deg) translate(1px, -4px);
+margin-right: 12px;
+width: 6px;
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-parent input[type="checkbox"] {
+display: none;
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-parent {
+display: none;
+width: 100%;
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-parent ul {
+list-style: none;
+width: 100%;
+text-align: left;
+border-radius: 4px;
+padding: 10px 5px;
+box-sizing: border-box;
+height: auto;
+overflow-x: hidden;
+overflow-y: scroll;
+box-shadow: 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 2px 4px -1px rgb(0 0 0 / 30%);
+background-color: #fff;
+margin: 2px 0 0 0;
+border: 1px solid #cccccc;
+box-shadow: 1px 1px 2px rgb(0 0 0 / 10%) inset;
+}
+
+/*滚动条样式*/
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-parent ul::-webkit-scrollbar {
+width: 2px;
+height: 4px;
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-parent ul::-webkit-scrollbar-thumb {
+border-radius: 5px;
+-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+background: rgb(78, 158, 151);
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-parent ul::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+border-radius: 0;
+background: rgba(202, 202, 202, 0.23);
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-select {
+width: 100%;
+height: auto;
+min-height: 40px;
+line-height: 40px;
+border-radius: 4px;
+padding-right: 10px;
+padding-left: 10px;
+box-sizing: border-box;
+overflow: hidden;
+background-size: auto 80%;
+border: 1px solid #cccccc;
+box-shadow: 1px 1px 2px rgb(0 0 0 / 10%) inset;
+background-color: #fff;
+position: relative;
+}
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-select:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #888;
+    transform: translateY(calc(-50% + 4px));
+    cursor: pointer;
+}
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-select span {
+line-height: 28px;
+color: #666;
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-parent label {
+color: #333;
+display: inline-flex;
+align-items: center;
+height: 30px;
+line-height: 22px;
+padding: 0;
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .multiple-parent ul li:not([class^="group"]) {
+
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .select-content {
+display: inline-block;
+border-radius: 4px;
+line-height: 23px;
+margin: 2px 2px 0 2px;
+padding: 0 3px;
+border: 1px solid #888;
+height: auto;
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS .select-delete {
+cursor: pointer;
+}
+
+.sitewidget-form-20261014143925-NJpFemHbYtkS select[multiple]{
+display:none;
+}

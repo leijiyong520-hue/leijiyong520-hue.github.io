@@ -1,0 +1,386 @@
+.dynamic-list-container{
+    /* 列表实例保留独立配置，未设置的新变量按原列数回退。 */
+    --list-columns-pc: initial;
+    --list-columns-pad: initial;
+    --list-columns-mobile: initial;
+    --prodlist-nums:4;
+    --list-columns: var(--list-columns-pc, var(--prodlist-nums, 4));
+    --layoutWidth: 100%;
+    --layoutLeftRight: 20px;
+    --layoutTopBottom: 20px;
+
+    word-break: break-word;
+}
+.dynamic-list-container .block-prodlist-container-replace{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-row-setting-container .block-prodlist-container-replace{
+    row-gap: var(--layoutTopBottom);
+    column-gap: var(--layoutLeftRight);
+}
+.dynamic-list-container .dynamic-component-container{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.list-row-setting-container .dynamic-component-container{
+        /* width = (100% - gap总宽度) / 每行数量 */
+    width: calc((100% - (var(--list-columns) - 1) * var(--layoutLeftRight)) / var(--list-columns));
+}
+
+.dynamic-list-container .emptyNodeData{
+        color: red;
+}
+
+.dynamic-list-container .layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: var(--ld-main1, #1E9FFF) !important;
+}
+
+.dynamic-list-container .list-item-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: normal;
+}
+
+.dynamic-list-container .list-item-container .minimum-unit-container {
+    max-width: 100%;
+    width: auto;
+}
+
+@media(max-width: 1024px){
+    .dynamic-list-container{
+        --prodlist-nums:3;
+        --list-columns: var(--list-columns-pad, var(--prodlist-nums, 3));
+    }
+}
+
+@media(max-width: 767px){
+    .dynamic-list-container{
+        --prodlist-nums:1;
+        --list-columns: var(--list-columns-mobile, var(--prodlist-nums, 1));
+    }
+
+    /* 画布和资源加载期间保留原始子节点，横向排版不修改编辑器组件树。 */
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .dynamic-list-container .list-mobile-scroll > .list-item-container{
+        flex: 0 0 auto;
+    }
+
+    /* Slick 计算可见列宽，间距放在卡片内，避免原 flex gap 叠加。 */
+    .list-row-setting-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized{
+        display: block;
+        overflow: visible;
+        gap: 0;
+    }
+
+    .dynamic-list-container .list-mobile-scroll.slick-initialized > .slick-list{
+        margin-inline: calc(var(--layoutLeftRight) / -2);
+    }
+
+    .dynamic-list-container .list-mobile-scroll.slick-initialized > .slick-list > .slick-track{
+        display: flex;
+    }
+
+    .dynamic-list-container .list-mobile-scroll.slick-initialized > .slick-list > .slick-track > .list-item-container{
+        flex: 0 0 auto;
+        /* 宿主 Slick 的内联 display:block 不能中断卡片内部的 flex 传导。 */
+        display: flex !important;
+        float: none;
+        height: auto;
+        padding-inline: calc(var(--layoutLeftRight) / 2);
+    }
+}
+
+.dynamic-list-container .prodlistAsync_label_text_tl {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: -25px;
+    max-width: 85px;
+    min-height: 30px;
+    transform: translateX(30%) rotate(315deg) translateZ(1px);
+    transform-origin: left top;
+    box-shadow: 0px -100px 0px 100px rgb(255, 0, 0);
+    color: #FFFFFF;
+    position: absolute;
+    top: 60px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2em !important;
+    letter-spacing: 0 !important;
+    font-style: normal !important;
+    background-color: rgb(255, 0, 0);
+    word-break: break-word;
+}
+
+.dynamic-list-container .prodListImg_box div.prodlistAsync_label_text_tr,
+.dynamic-list-container .prodListImg_box div.prodlistAsync_label_text_tl {
+    color: #FFFFFF;
+}
+
+.dynamic-list-container .prodlistAsync_label_text_tr {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: -25px;
+    max-width: 85px;
+    min-height: 30px;
+    transform: translateX(30%) rotate(45deg) translateZ(1px);
+    transform-origin: left top;
+    box-shadow: 0px -100px 0px 100px rgb(255, 0, 0);
+    color: #FFFFFF;
+    position: absolute;
+    top: 60px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2em !important;
+    letter-spacing: 0 !important;
+    font-style: normal !important;
+    background-color: rgb(255, 0, 0);
+    word-break: break-word;
+}
+
+.dynamic-list-container .prodlistAsync_label_text_tl .discount {
+    word-break: break-word;
+    letter-spacing: 0 !important;
+    font-style: normal !important;
+}
+
+.dynamic-list-container .prodlistAsync_label_text_tr .discount {
+    word-break: break-word;
+    letter-spacing: 0 !important;
+    font-style: normal !important;
+}
+
+.dynamic-list-container .prodlistAsync_label_text_tl.show,
+.dynamic-list-container .prodlistAsync_label_text_tr.show {
+    display: flex;
+}
+
+.dynamic-list-container .prodlistAsync_label_text_t {
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    letter-spacing: 0 !important;
+    font-style: normal !important;
+}
+
+.dynamic-list-container .prodlistAsync_label_text_t>div {
+    max-width: 100%;
+    padding: 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 26px;
+    margin-right: 2px;
+    background-color: #000;
+    text-align: start;
+    font-size: 12px;
+    line-height: 26px !important;
+    color: #fff;
+    /* Opera */
+    letter-spacing: 0 !important;
+    font-style: normal !important;
+}
+
+.dynamic-list-container .prodlistAsync_label_text_t>.discount {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    letter-spacing: 0 !important;
+    font-style: normal !important;
+    padding: 0;
+}
+
+.dynamic-list-container .prodlistAsync_label_text_t.show {
+    display: flex;
+    letter-spacing: 0 !important;
+    font-style: normal !important;
+}
+
+.dynamic-list-container .prodlistAsync_label_img_tr {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+.dynamic-list-container .prodlistAsync_label_img_r {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 10px;
+}
+
+.dynamic-list-container .prodlistAsync_label_img_r img {
+    position: relative;
+    transform: unset;
+    float: right;
+    max-width: 26px !important;
+    margin-bottom: 2px
+}
+
+.dynamic-list-container .prodlistAsync_label_img_r.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.dynamic-list-container .prodlistAsync_label_text_tl>div,
+.dynamic-list-container .prodlistAsync_label_text_tr>div {
+    letter-spacing: 0 !important;
+    font-style: normal !important;
+}
+
+.dynamic-list-container .labelfather .prodlistAsync_label_img_tl {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    letter-spacing: 0 !important;
+    font-style: normal !important;
+}
+
+.dynamic-list-container .labelfather .prodlistAsync_label_img_tr img,
+.dynamic-list-container .labelfather .prodlistAsync_label_img_tl img {
+    position: relative;
+    transform: unset;
+    width: 100%;
+    margin-bottom: 5px;
+    max-width: 75px !important;
+}
+
+.dynamic-list-container .labelfather .prodlistAsync_label_img_tl.show,
+.dynamic-list-container .prodlistAsync_label_img_tr.show {
+    display: block;
+}
+
+.dynamic-list-container .list-item-container .minimum-unit-container[data-appid="29074"] {
+    width: 100%;
+}
+
+.dynamic-list-container .list-item-container .inlineLabel {
+    width: auto;
+    padding: 0px 5px;
+    text-wrap: nowrap;
+}
+
+/* 移动列表独立导航仅作用于本列表直接控件，保留卡片内部图片轮播的分页。 */
+@media (max-width: 767px) {
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized {
+        position: relative;
+        margin-bottom: 0;
+    }
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: transparent;
+        color: var(--ld-text1-color, #333);
+        line-height: 1;
+        cursor: pointer;
+    }
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .slick-prev-arrows {
+        left: 0;
+        right: auto;
+    }
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .slick-next-arrows {
+        right: 0;
+        left: auto;
+    }
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-arrow > .lead_icon {
+        display: inline-block;
+        color: inherit;
+        font-size: 18px;
+        line-height: 1;
+    }
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .slick-next-arrows > .lead_icon {
+        transform: rotate(180deg);
+    }
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-arrow.slick-disabled {
+        opacity: .3;
+        pointer-events: none;
+        cursor: default;
+    }
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-dots {
+        position: static;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+        margin: 12px 0 0;
+        padding: 0;
+        list-style: none;
+        transform: none;
+    }
+    /* 文章的 li 卡片规则也会命中圆点，需要在导航边界重置尺寸与布局。 */
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-dots > li {
+        display: block;
+        float: none;
+        flex: none;
+        width: 8px;
+        height: 8px;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-dots > li > button {
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: var(--ld-text1-color, #333);
+        opacity: .3;
+        font-size: 0;
+        line-height: 0;
+        cursor: pointer;
+    }
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-dots > li.slick-active > button {
+        opacity: 1;
+    }
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-arrow::before,
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-arrow::after,
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-dots > li > button::before,
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-dots > li > button::after {
+        display: none;
+        content: none;
+    }
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-arrow:focus-visible,
+    .dynamic-list-container .block-prodlist-container-replace.list-mobile-scroll.slick-initialized > .list-mobile-dots > li > button:focus-visible {
+        outline: 2px solid var(--ld-text1-color, #333);
+        outline-offset: 2px;
+    }
+}

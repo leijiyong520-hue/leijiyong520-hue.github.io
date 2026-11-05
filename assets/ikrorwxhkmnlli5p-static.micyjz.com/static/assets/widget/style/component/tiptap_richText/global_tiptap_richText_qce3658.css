@@ -1,0 +1,10 @@
+.contentEditRichText_editorContainer h1:not(.contentEditRichText_editorContainer section h1){font-size:var(--h1-font-size);font-weight:600;line-height:var(--h1-line-height)}
+.contentEditRichText_editorContainer h2:not(.contentEditRichText_editorContainer section h2){font-size:var(--h2-font-size);font-weight:600;line-height:var(--h2-line-height)}
+.contentEditRichText_editorContainer h3:not(.contentEditRichText_editorContainer section h3){font-size:var(--h3-font-size);font-weight:600;line-height:var(--h3-line-height)}
+.contentEditRichText_editorContainer h4:not(.contentEditRichText_editorContainer section h4){font-size:var(--h4-font-size);line-height:var(--h4-line-height)}
+.contentEditRichText_editorContainer h5:not(.contentEditRichText_editorContainer section h5){font-size:var(--h5-font-size);line-height:var(--h5-line-height)}
+.contentEditRichText_editorContainer h6:not(.contentEditRichText_editorContainer section h6){font-size:var(--h6-font-size);line-height:var(--h6-line-height)}
+.contentEditRichText_editorContainer h4:not(.contentEditRichText_editorContainer section h4),.contentEditRichText_editorContainer h5:not(.contentEditRichText_editorContainer section h5),.contentEditRichText_editorContainer h6:not(.contentEditRichText_editorContainer section h6){font-weight:600}
+.contentEditRichText_editorContainer p:not(.contentEditRichText_editorContainer section p){font-size:var(--p-font-size);line-height:var(--p-line-height);min-height:1em}
+.contentEditRichText_editorContainer .phoenix_h4:not(.contentEditRichText_editorContainer section .phoenix_h4){font-size:var(--h4-font-size);line-height:var(--h4-line-height);font-weight:600}
+.contentEditRichText_editorContainer .phoenix_p1:not(.contentEditRichText_editorContainer section .phoenix_p1){font-size:var(--p-font-size);line-height:var(--p-line-height);min-height:1em}

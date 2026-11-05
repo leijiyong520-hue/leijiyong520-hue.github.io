@@ -1,0 +1,72 @@
+.prodInquire{
+    --prodInquire-background: black;
+    --prodInquire-color: rgb(255, 255, 255);
+    /* --prodInquire-padding:10px 0px; */
+    --btnVal-leftRight: 0px;
+    --btnVal-topBottom: 10px;
+
+    --btnVal-width: 280px;
+    --btnVal-height: auto;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+.prodInquire .prodInquire_btn-button-container {
+    width: 100%;
+}
+.prodInquire .prodInquire_btn .prodInquire-inner {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: none !important;
+  box-shadow: none !important;
+  width: 100%;
+}
+.prodInquire .prodInquire_btn{
+    border-radius: 4px;
+    box-shadow: 0 0 0 0 transparent;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s ease-in-out;
+    background-color: var(--prodInquire-background);
+    color: var(--prodInquire-color);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: var(--prodInquire-padding); */
+    padding: var(--btnVal-topBottom) var(--btnVal-leftRight);
+    width: var(--btnVal-width);
+    height: var(--btnVal-height);
+
+    box-sizing: content-box;
+
+    position: relative;
+}
+
+.prodInquire .prodInquire_btn a{
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+    font-style: inherit;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: inherit;
+    flex-direction: inherit;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

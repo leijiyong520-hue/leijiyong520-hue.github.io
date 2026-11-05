@@ -1,0 +1,1159 @@
+@charset "UTF-8";
+/* 3.0
+修改后phoenix和以下组件的tiptap_rich.css需要更新，否则网站发布后缺少对应样式
+1、产品描述组件
+
+4.0
+1、产品详情最小单元容器+产品描述节点
+2、文章详情最小单元容器+文章内容节点
+3、文章详情组件
+ */
+:root {
+  --ld-qc-title1-font-size: 40px;
+  --ld-qc-title2-font-size: 30px;
+  --ld-qc-title3-font-size: 26px;
+  --ld-qc-title4-font-size: 22px;
+  --ld-qc-title5-font-size: 20px;
+  --ld-qc-title6-font-size: 18px;
+  --ld-qc-text1-font-size: 16px;
+}
+
+html body.frontend-body-canvas .ld-qc-paragraph1:not(.contentEditRichText_editorContainer section .ld-qc-paragraph1) {
+  font-size: var(--ld-qc-text1-font-size);
+}
+
+html body.frontend-body-canvas .ld-qc-heading1:not(.contentEditRichText_editorContainer section .ld-qc-heading1) {
+  font-size: var(--ld-qc-title1-font-size);
+}
+
+html body.frontend-body-canvas .ld-qc-heading2:not(.contentEditRichText_editorContainer section .ld-qc-heading2) {
+  font-size: var(--ld-qc-title2-font-size);
+}
+
+html body.frontend-body-canvas .ld-qc-heading3:not(.contentEditRichText_editorContainer section .ld-qc-heading3) {
+  font-size: var(--ld-qc-title3-font-size);
+}
+
+html body.frontend-body-canvas .ld-qc-heading4:not(.contentEditRichText_editorContainer section .ld-qc-heading4) {
+  font-size: var(--ld-qc-title4-font-size);
+}
+
+html body.frontend-body-canvas .ld-qc-heading5:not(.contentEditRichText_editorContainer section .ld-qc-heading5) {
+  font-size: var(--ld-qc-title5-font-size);
+}
+
+html body.frontend-body-canvas .ld-qc-heading6:not(.contentEditRichText_editorContainer section .ld-qc-heading6) {
+  font-size: var(--ld-qc-title6-font-size);
+}
+
+/* 让产品预览富文本渲染效果与导出样式一致 */
+/* 富文本编辑器默认样式（已展开为普通 CSS） */
+.contentEditRichText_editorContainer:not(.contentEditRichText_editorContainer section .contentEditRichText_editorContainer) {
+  --min-width-table:32px;
+  --min-width-table-mobile:32px;
+  --h1-margin:26px;
+  --h2-margin:20px;
+  --h3-margin:20px;
+  --h4-margin:12px;
+  --h5-margin:12px;
+  --h6-margin:12px;
+  --p-margin:12px;
+  --figure-margin:10px;
+  --h1-font-size: 2.2em;
+  --h2-font-size: 2em;
+  --h3-font-size: 1.6em;
+  --h4-font-size: 1.4em;
+  --h5-font-size: 1.3em;
+  --h6-font-size: 1.125em;
+  --p-font-size: 1em;
+  --h1-line-height: 1.3;
+  --h2-line-height: 1.3;
+  --h3-line-height: 1.5;
+  --h4-line-height: 1.5;
+  --h5-line-height: 1.5;
+  --h6-line-height: 1.5;
+  --p-line-height: 1.7;
+  word-break: break-word;
+}
+
+.contentEditRichText_editorContainer h1:not(.contentEditRichText_editorContainer section h1) {
+  margin: var(--h1-margin) 0;
+  /* font-size: var(--h1-font-size);
+  font-weight: 600;
+  line-height: var(--h1-line-height); */
+}
+
+.contentEditRichText_editorContainer h2:not(.contentEditRichText_editorContainer section h2) {
+  /* font-size: var(--h2-font-size); */
+  margin: var(--h2-margin) 0;
+  /* font-weight: 600;
+  line-height: var(--h2-line-height); */
+}
+
+.contentEditRichText_editorContainer h3:not(.contentEditRichText_editorContainer section h3) {
+  /* font-size: var(--h3-font-size); */
+  margin: var(--h3-margin) 0;
+  /* font-weight: 600;
+  line-height: var(--h3-line-height); */
+}
+
+.contentEditRichText_editorContainer h4:not(.contentEditRichText_editorContainer section h4) {
+  /* font-size: var(--h4-font-size);
+  line-height: var(--h4-line-height); */
+}
+
+.contentEditRichText_editorContainer h5:not(.contentEditRichText_editorContainer section h5) {
+  /* font-size: var(--h5-font-size);
+  line-height: var(--h5-line-height); */
+}
+
+.contentEditRichText_editorContainer h6:not(.contentEditRichText_editorContainer section h6) {
+  /* font-size: var(--h6-font-size);
+  line-height: var(--h6-line-height); */
+}
+
+.contentEditRichText_editorContainer h4:not(.contentEditRichText_editorContainer section h4),
+.contentEditRichText_editorContainer h5:not(.contentEditRichText_editorContainer section h5),
+.contentEditRichText_editorContainer h6:not(.contentEditRichText_editorContainer section h6) {
+  margin: var(--h4-margin) 0;
+  /* font-weight: 600; */
+}
+
+.contentEditRichText_editorContainer p:not(.contentEditRichText_editorContainer section p) {
+  margin: var(--p-margin) 0;
+  /* font-size: var(--p-font-size);
+  line-height: var(--p-line-height);
+  min-height: 1em; */
+}
+
+.contentEditRichText_editorContainer:not(.contentEditRichText_editorContainer section .contentEditRichText_editorContainer) {
+  --qc-color14: rgba(56, 54, 75, 1);
+  --qc-heading-color: rgba(15, 12, 30, 1);
+  --qc-text-color: var(--qc-color14);
+  line-height: 1.6;
+  padding: 0;
+}
+
+.contentEditRichText_editorContainer figure:not(.contentEditRichText_editorContainer section figure) {
+  margin: var(--figure-margin) 0;
+}
+
+.contentEditRichText_editorContainer strong:not(.contentEditRichText_editorContainer section strong) {
+  font-weight: 600;
+}
+
+.contentEditRichText_editorContainer em:not(.contentEditRichText_editorContainer section em) {
+  font-style: italic;
+  font-weight: inherit;
+}
+
+.contentEditRichText_editorContainer ul:not(.contentEditRichText_editorContainer section ul),
+.contentEditRichText_editorContainer ol:not(.contentEditRichText_editorContainer section ol) {
+  margin-bottom: 16px;
+  padding-left: 30px;
+}
+
+.contentEditRichText_editorContainer li:not(.contentEditRichText_editorContainer section li) {
+  margin-bottom: 8px;
+  /* 确保继承父级 ul/ol 的 list-style-type */
+  list-style: inherit;
+}
+
+/* 无序列表 (Unordered List) - 循环顺序: 实心圆 -> 空心圆 -> 实心方块 */
+/* 覆盖 1-16 级嵌套，利用 CSS 选择器优先级(Specificity)自动生效 */
+.contentEditRichText_editorContainer ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: disc;
+}
+
+.contentEditRichText_editorContainer ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: circle;
+}
+
+.contentEditRichText_editorContainer ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: square;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: disc;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: circle;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: square;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: disc;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: circle;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: square;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: disc;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul ul ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: circle;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul ul ul ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: square;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul ul ul ul ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: disc;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul ul ul ul ul ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: circle;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: square;
+}
+
+.contentEditRichText_editorContainer ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul:not(.contentEditRichText_editorContainer section ul) {
+  list-style-type: disc;
+}
+
+/* 有序列表 (Ordered List) - 循环顺序: 数字 -> 小写字母 -> 带括号数字 */
+/* 覆盖 1-16 级嵌套 */
+.contentEditRichText_editorContainer ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: decimal;
+}
+
+.contentEditRichText_editorContainer ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: lower-alpha;
+}
+
+.contentEditRichText_editorContainer ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: none;
+  counter-reset: parens-counter;
+}
+
+.contentEditRichText_editorContainer ol ol ol > li:not(.contentEditRichText_editorContainer section li) {
+  counter-increment: parens-counter;
+}
+
+.contentEditRichText_editorContainer ol ol ol > li:not(.contentEditRichText_editorContainer section li)::marker {
+  content: "(" counter(parens-counter) ") ";
+}
+
+.contentEditRichText_editorContainer ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: decimal;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol > li:not(.contentEditRichText_editorContainer section li)::marker {
+  content: normal;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: lower-alpha;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: none;
+  counter-reset: parens-counter;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li) {
+  counter-increment: parens-counter;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li)::marker {
+  content: "(" counter(parens-counter) ") ";
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: decimal;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li)::marker {
+  content: normal;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: lower-alpha;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: none;
+  counter-reset: parens-counter;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li) {
+  counter-increment: parens-counter;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li)::marker {
+  content: "(" counter(parens-counter) ") ";
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: decimal;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li)::marker {
+  content: normal;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: lower-alpha;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: none;
+  counter-reset: parens-counter;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li) {
+  counter-increment: parens-counter;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li)::marker {
+  content: "(" counter(parens-counter) ") ";
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: decimal;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li)::marker {
+  content: normal;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: lower-alpha;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: none;
+  counter-reset: parens-counter;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li) {
+  counter-increment: parens-counter;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li)::marker {
+  content: "(" counter(parens-counter) ") ";
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol:not(.contentEditRichText_editorContainer section ol) {
+  list-style-type: decimal;
+}
+
+.contentEditRichText_editorContainer ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol ol > li:not(.contentEditRichText_editorContainer section li)::marker {
+  content: normal;
+}
+
+.contentEditRichText_editorContainer ul li:not(.contentEditRichText_editorContainer section li)::marker,
+.contentEditRichText_editorContainer ol li:not(.contentEditRichText_editorContainer section li)::marker {
+  font-size: 1.128em;
+}
+
+.contentEditRichText_editorContainer blockquote:not(.contentEditRichText_editorContainer section blockquote) {
+  margin: 20px 0;
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  font-style: italic;
+}
+
+.contentEditRichText_editorContainer code:not(.contentEditRichText_editorContainer section code) {
+  background-color: #f1f2f6;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.contentEditRichText_editorContainer pre:not(.contentEditRichText_editorContainer section pre) {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 15px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+.contentEditRichText_editorContainer pre code:not(.contentEditRichText_editorContainer section code) {
+  background-color: transparent;
+  padding: 0;
+}
+
+.contentEditRichText_editorContainer table:not(.contentEditRichText_editorContainer section table) {
+  width: auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 0;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+html .contentEditRichText_editorContainer th:not(.contentEditRichText_editorContainer section th),
+html .contentEditRichText_editorContainer td:not(.contentEditRichText_editorContainer section td) {
+  min-width: var(--min-width-table);
+  border: 1px solid #ddd;
+  padding: 12px;
+  /* 
+   * 最终方案：
+   * 1. word-break: normal -> 保证中文自动换行，英文单词保持完整（优先在空格处换行）。
+   * 2. overflow-wrap: break-word -> 只有当单词长度超过列宽且无法换行时，才在单词内部断行，防止溢出。
+   * 注意：这可能会导致列宽无法拖拽到比最长单词更窄（受限于内容最小宽度），这是保持单词完整的物理必然。
+   */
+  word-break: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+/* 显式 left/center/right 对齐：容器和图片按原始尺寸显示 */
+.contentEditRichText_editorContainer .image-block[data-align="left"] .html-image-inner,
+.contentEditRichText_editorContainer .image-block[data-align="center"] .html-image-inner,
+.contentEditRichText_editorContainer .image-block[data-align="right"] .html-image-inner {
+  width: auto;
+}
+
+.contentEditRichText_editorContainer .image-block[data-align="left"] .html-image-inner img,
+.contentEditRichText_editorContainer .image-block[data-align="center"] .html-image-inner img,
+.contentEditRichText_editorContainer .image-block[data-align="right"] .html-image-inner img {
+  width: auto;
+  max-width: 100%;
+}
+
+.contentEditRichText_editorContainer .image-block[data-align="left"] .html-image-inner a,
+.contentEditRichText_editorContainer .image-block[data-align="center"] .html-image-inner a,
+.contentEditRichText_editorContainer .image-block[data-align="right"] .html-image-inner a {
+  width: auto;
+}
+
+/* 铺满模式：显式 full 和无 data-align 的老数据均为 100% */
+.contentEditRichText_editorContainer .image-block[data-align="full"] .html-image-inner {
+  width: 100%;
+}
+
+.contentEditRichText_editorContainer .image-block[data-align="full"] .html-image-inner a{
+  width: 100%;
+}
+
+.contentEditRichText_editorContainer .image-block[data-align="full"] .html-image-inner img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  html .contentEditRichText_editorContainer th:not(.contentEditRichText_editorContainer section th),
+  html .contentEditRichText_editorContainer td:not(.contentEditRichText_editorContainer section td) {
+    min-width: var(--min-width-table-mobile, var(--min-width-table));
+  }
+}
+.contentEditRichText_editorContainer th:not(.contentEditRichText_editorContainer section th) {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.contentEditRichText_editorContainer a {
+  text-decoration: none;
+  cursor: pointer;
+}
+/* section section a  排除4.0系统页嵌套4.0区块的情况*/
+html body .contentEditRichText_editorContainer a {
+  color:  #008cff;
+}
+
+html .contentEditRichText_editorContainer a:not(.contentEditRichText_editorContainer section a),
+div[class^=sitewidget-].contentEditRichText_editorContainer a:not(.contentEditRichText_editorContainer section a),
+div[class^=sitewidget-] .contentEditRichText_editorContainer a:not(.contentEditRichText_editorContainer section a) {
+  /* font-size: inherit; */
+}
+
+html body .contentEditRichText_editorContainer a:hover {
+  text-decoration: underline;
+}
+
+.contentEditRichText_editorContainer img:not(.contentEditRichText_editorContainer section img) {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contentEditRichText_editorContainer .image-block:not(.contentEditRichText_editorContainer section .image-block) {
+  font-size: 0;
+}
+
+.contentEditRichText_editorContainer .html-image-inner:not(.contentEditRichText_editorContainer section .html-image-inner) {
+  max-width: 100%;
+  display: flex;
+  width: 100%;
+}
+
+.contentEditRichText_editorContainer .html-image-inner a:not(.contentEditRichText_editorContainer section a) {
+  width: 100%;
+}
+
+.contentEditRichText_editorContainer hr:not(.contentEditRichText_editorContainer section hr) {
+  border: none;
+  border-top: 2px solid #ecf0f1;
+  margin: 30px 0;
+}
+
+.contentEditRichText_editorContainer .web-embed-block:not(.contentEditRichText_editorContainer section .web-embed-block) {
+  width: 100%;
+}
+
+.contentEditRichText_editorContainer .web-embed-block iframe:not(.contentEditRichText_editorContainer section iframe) {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.contentEditRichText_editorContainer .qc-divider-wrapper:not(.contentEditRichText_editorContainer section .qc-divider-wrapper) {
+  min-height: 12px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.contentEditRichText_editorContainer .tableWrapper:not(.contentEditRichText_editorContainer section .tableWrapper) {
+  overflow-x: auto;
+  display: block;
+  margin: var(--p-margin) 0;
+}
+
+.contentEditRichText_editorContainer .tableWrapper table:not(.contentEditRichText_editorContainer section table) {
+  width: auto;
+  min-width: auto;
+}
+
+.contentEditRichText_editorContainer .tableWrapper table p:not(.contentEditRichText_editorContainer section p) {
+  margin: 0;
+}
+
+.contentEditRichText_editorContainer .html-block:not(.contentEditRichText_editorContainer section .html-block) {
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, 微软雅黑, Arial, sans-serif;
+}
+
+/* 自适应模式：开启 contentAdaptation 时，表格宽度随内容，支持左右/居中/右对齐 */
+.contentEditRichText_editorContainer .tableWrapper:not(.contentEditRichText_editorContainer section .tableWrapper) {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .contentEditRichText_editorContainer .tableWrapper.contentAdaptation table:not(.contentEditRichText_editorContainer section table) {
+    width: 100% !important;
+    min-width: 100% !important;
+    table-layout: fixed;
+  }
+}
+.contentEditRichText_editorContainer .tableWrapper.alignleft:not(.contentEditRichText_editorContainer section .tableWrapper.alignleft) {
+  justify-content: flex-start;
+}
+
+.contentEditRichText_editorContainer .tableWrapper.alignCenter:not(.contentEditRichText_editorContainer section .tableWrapper.alignCenter) {
+  justify-content: center;
+}
+
+.contentEditRichText_editorContainer .tableWrapper.alignRight:not(.contentEditRichText_editorContainer section .tableWrapper.alignRight) {
+  justify-content: flex-end;
+}
+
+/* ImageBlock 对齐：通过 data-align 驱动，避免在 NodeView 中写内联样式 */
+.contentEditRichText_editorContainer .image-block:not(.contentEditRichText_editorContainer section .image-block) {
+  display: flex;
+}
+
+.contentEditRichText_editorContainer .image-block[data-align=left]:not(.contentEditRichText_editorContainer section .image-block) {
+  justify-content: left;
+}
+
+.contentEditRichText_editorContainer .image-block[data-align=center]:not(.contentEditRichText_editorContainer section .image-block) {
+  justify-content: center;
+}
+
+.contentEditRichText_editorContainer .image-block[data-align=right]:not(.contentEditRichText_editorContainer section .image-block) {
+  justify-content: right;
+}
+
+.contentEditRichText_editorContainer .html-video-inner:not(.contentEditRichText_editorContainer section .html-video-inner) {
+  display: flex;
+}
+.contentEditRichText_editorContainer .video-block .html-video-inner.media-loading[style*="aspect-ratio"],
+.contentEditRichText_editorContainer .video-block .html-video-inner.media-error[style*="aspect-ratio"] {
+  min-height: 0 !important
+}
+
+/* 小屏幕下，表格宽度自适应 */
+.product-preview .mobile .contentEditRichText_editorContainer table:not(.contentEditRichText_editorContainer section table) {
+  table-layout: auto;
+}
+
+.product-preview .mobile .contentEditRichText_editorContainer .tableWrapper:not(.contentEditRichText_editorContainer section .tableWrapper) {
+  overflow-x: auto !important;
+  width: 100%;
+  display: block !important;
+}
+
+.product-preview .mobile .contentEditRichText_editorContainer .tableWrapper table:not(.contentEditRichText_editorContainer section table) {
+  /* 移动端强制铺满：仅靠样式覆盖 table/col 的行内宽度约束 */
+  table-layout: fixed !important;
+  word-break: break-word;
+  width: max-content !important;
+  min-width: 100% !important;
+}
+
+.product-preview .mobile .contentEditRichText_editorContainer .tableWrapper table col:not(.contentEditRichText_editorContainer section col),
+.product-preview .mobile .contentEditRichText_editorContainer .tableWrapper table col[style]:not(.contentEditRichText_editorContainer section col) {
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .contentEditRichText_editorContainer table:not(.contentEditRichText_editorContainer section table) {
+    table-layout: auto;
+  }
+  .contentEditRichText_editorContainer .tableWrapper:not(.contentEditRichText_editorContainer section .tableWrapper) {
+    overflow-x: auto !important;
+    width: 100%;
+    display: block !important;
+  }
+  .contentEditRichText_editorContainer .tableWrapper table:not(.contentEditRichText_editorContainer section table) {
+    /* 移动端强制铺满：仅靠样式覆盖 table/col 的行内宽度约束 */
+    table-layout: fixed !important;
+    word-break: break-word;
+    width: max-content !important;
+    min-width: 100% !important;
+  }
+  .contentEditRichText_editorContainer .tableWrapper table col:not(.contentEditRichText_editorContainer section col),
+  .contentEditRichText_editorContainer .tableWrapper table col[style]:not(.contentEditRichText_editorContainer section col) {
+    width: auto !important;
+    min-width: 0 !important;
+  }
+}
+/* 4.0融合 */
+.contentEditRichText_editorContainer .block-type-wrapper:not(.contentEditRichText_editorContainer section .block-type-wrapper) {
+  margin: 12px 0;
+}
+
+/* 4.0融合 */
+/* 4.o融合新版编辑器会出现滚动条 */
+.contentEditRichText_editorContainer .block-editor-lead-container.block-container .lead-bg {
+  max-width: 100%;
+}
+
+/* 4.o融合新版编辑器会出现滚动条 */
+
+
+/* 媒体加载loading - 伪元素方案（前台/导出） */
+.contentEditRichText_editorContainer .html-image-inner.media-loading,
+.contentEditRichText_editorContainer .html-video-inner.media-loading {
+  position: relative;
+  min-height: 300px;
+  background: #f5f5f5;
+}
+.contentEditRichText_editorContainer .html-image-inner.media-loading::before,
+.contentEditRichText_editorContainer .html-video-inner.media-loading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  border: 3px solid #e0e0e0;
+  border-top-color: #999;
+  border-radius: 50%;
+  animation: media-spin 0.8s linear infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.contentEditRichText_editorContainer .html-image-inner.media-loading img,
+.contentEditRichText_editorContainer .html-video-inner.media-loading video,
+.contentEditRichText_editorContainer .html-video-inner.media-loading iframe{
+    z-index: -1;
+}
+@keyframes media-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 媒体加载失败 - 伪元素方案（前台/导出） */
+.contentEditRichText_editorContainer .html-image-inner.media-error[style*="width: auto"] {
+  width: 100% !important;
+}
+.contentEditRichText_editorContainer .html-image-inner.media-error img,
+.contentEditRichText_editorContainer .html-video-inner.media-error video,
+.contentEditRichText_editorContainer .html-video-inner.media-error iframe {
+  display: none !important;
+}
+.contentEditRichText_editorContainer .html-image-inner.media-error,
+.contentEditRichText_editorContainer .html-video-inner.media-error {
+  position: relative;
+  min-height: 300px;
+  background: #f5f5f5;
+}
+.contentEditRichText_editorContainer .html-image-inner.media-error::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  /* base64 避免 url() 内未编码空格被压缩器删掉导致 SVG 损坏 */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNTAnIGhlaWdodD0nNTAnIHZpZXdCb3g9JzAgMCA1MCA1MCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNNDEuODgzOCAyQzQ1LjI2MTQgMi4wMDAxMiA0Ny45OTk5IDQuNzM4NTYgNDggOC4xMTYyMVY0MS44ODM4QzQ3Ljk5OTkgNDUuMjYxNCA0NS4yNjE0IDQ3Ljk5OTkgNDEuODgzOCA0OEg4LjExNjIxQzcuOTU4NzggNDggNy44MDI4OCA0Ny45OTIyIDcuNjQ4NDQgNDcuOTgwNUM3LjM4NTg1IDQ4LjAyNTkgNy4xMTMxMSA0Ny45ODg5IDYuODY5MTQgNDcuODcyMUM0LjA4OTUzIDQ3LjI5NiAyLjAwMDExIDQ0LjgzNDEgMiA0MS44ODM4VjguMTE2MjFDMi4wMDAxMiA0LjczODU2IDQuNzM4NTYgMi4wMDAxMiA4LjExNjIxIDJINDEuODgzOFpNMTAuNjQ2NSA0NS40MTZINDEuODgzOEM0My44MzQyIDQ1LjQxNTkgNDUuNDE1OSA0My44MzQyIDQ1LjQxNiA0MS44ODM4VjMzLjE2MzFMMzQuNDMyNiAyMi42NTMzTDEwLjY0NjUgNDUuNDE2Wk04LjExNjIxIDQuNTgzOThDNi4xNjU4MSA0LjU4NDExIDQuNTg0MTEgNi4xNjU4MSA0LjU4Mzk4IDguMTE2MjFWNDEuODgzOEM0LjU4NDA5IDQzLjQ3MDcgNS42MzE1NCA0NC44MTI0IDcuMDcyMjcgNDUuMjU3OEwzMy41MzkxIDE5LjkzMTZMMzMuNjM1NyAxOS44NDc3QzM0LjEzNTcgMTkuNDU1NSAzNC44NTc4IDE5LjQ4MzUgMzUuMzI2MiAxOS45MzE2TDQ1LjQxNiAyOS41ODY5VjguMTE2MjFDNDUuNDE1OSA2LjE2NTgxIDQzLjgzNDIgNC41ODQxMSA0MS44ODM4IDQuNTgzOThIOC4xMTYyMVpNMTYuNzMwNSAxMS4zMDM3QzE5LjcyNzYgMTEuMzAzOCAyMi4xNTcyIDEzLjczMzMgMjIuMTU3MiAxNi43MzA1QzIyLjE1NzIgMTkuNzI3NiAxOS43Mjc2IDIyLjE1NzIgMTYuNzMwNSAyMi4xNTcyQzEzLjczMzMgMjIuMTU3MiAxMS4zMDM4IDE5LjcyNzYgMTEuMzAzNyAxNi43MzA1QzExLjMwMzcgMTMuNzMzMiAxMy43MzMyIDExLjMwMzcgMTYuNzMwNSAxMS4zMDM3Wk0xNi43MzA1IDEzLjg4NzdDMTUuMTYwNSAxMy44ODc3IDEzLjg4NzcgMTUuMTYwNSAxMy44ODc3IDE2LjczMDVDMTMuODg3OCAxOC4zMDA0IDE1LjE2MDUgMTkuNTczMiAxNi43MzA1IDE5LjU3MzJDMTguMzAwMyAxOS41NzMyIDE5LjU3MzIgMTguMzAwMyAxOS41NzMyIDE2LjczMDVDMTkuNTczMiAxNS4xNjA1IDE4LjMwMDQgMTMuODg3OCAxNi43MzA1IDEzLjg4NzdaJyBmaWxsPScjQzlDOUM5Jy8+PC9zdmc+");
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+.contentEditRichText_editorContainer .html-video-inner.media-error::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNTAnIGhlaWdodD0nNTAnIHZpZXdCb3g9JzAgMCA1MCA1MCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNNDUuODMzMiAyLjA4Mzk4SDQuMTY2NUMyLjM5NTY3IDIuMDgzOTggMS4wNDE1IDMuNDM4MTUgMS4wNDE1IDUuMjA4OThWNDQuNzkyM0MxLjA0MTUgNDYuNTYzMSAyLjM5NTY3IDQ3LjkxNzMgNC4xNjY1IDQ3LjkxNzNINDUuODMzMkM0Ny42MDQgNDcuOTE3MyA0OC45NTgyIDQ2LjU2MzEgNDguOTU4MiA0NC43OTIzVjUuMjA4OThDNDguOTU4MiAzLjQzODE1IDQ3LjYwNCAyLjA4Mzk4IDQ1LjgzMzIgMi4wODM5OFpNMzYuNzcwNyA0LjE2NzMyTDQyLjgxMjMgMTAuNDE3M0gzNC43OTE1TDI4Ljc0OTggNC4xNjczMkgzNi43NzA3Wk0yNi4zNTQgNC4xNjczMkwzMi4zOTU3IDEwLjQxNzNIMjQuMzc0OEwxOC4zMzMyIDQuMTY3MzJIMjYuMzU0Wk0xNS45MzczIDQuMTY3MzJMMjEuOTc5IDEwLjQxNzNIMTMuOTU4Mkw3LjkxNjUgNC4xNjczMkgxNS45MzczWk0zLjEyNDg0IDUuMjA4OThDMy4xMjQ4NCA0LjU4Mzk4IDMuNTQxNSA0LjE2NzMyIDQuMTY2NSA0LjE2NzMySDUuNTIwNjdMMTEuNTYyMyAxMC40MTczSDMuMTI0ODRWNS4yMDg5OFpNNDYuODc0OCA0NC43OTIzQzQ2Ljg3NDggNDUuNDE3MyA0Ni40NTgyIDQ1LjgzNCA0NS44MzMyIDQ1LjgzNEg0LjE2NjVDMy41NDE1IDQ1LjgzNCAzLjEyNDg0IDQ1LjQxNzMgMy4xMjQ4NCA0NC43OTIzVjEyLjUwMDdINDYuODc0OFY0NC43OTIzWk00Ni44NzQ4IDEwLjQxNzNINDUuMjA4MkwzOS4xNjY1IDQuMTY3MzJINDUuODMzMkM0Ni40NTgyIDQuMTY3MzIgNDYuODc0OCA0LjU4Mzk4IDQ2Ljg3NDggNS4yMDg5OFYxMC40MTczWicgZmlsbD0nI0NBQ0FDQScvPjxwYXRoIGQ9J00yMC44MzM1IDM5LjA2MzJDMjEuMzU0MyAzOS4wNjMyIDIxLjk3OTMgMzguOTU5IDIyLjUwMDIgMzguNjQ2NUwzNC4zNzUyIDMxLjc3MTVDMzYuNDU4NSAzMC42MjU3IDM2LjQ1ODUgMjcuNzA5IDM0LjM3NTIgMjYuNTYzMkwyMi41MDAyIDE5LjY4ODJDMjEuOTc5MyAxOS4zNzU3IDIxLjQ1ODUgMTkuMjcxNSAyMC44MzM1IDE5LjI3MTVDMTkuMTY2OCAxOS4yNzE1IDE3LjcwODUgMjAuMTA0OCAxNy43MDg1IDIxLjg3NTdWMzYuNDU5QzE3LjcwODUgMzguMjI5OCAxOS4xNjY4IDM5LjA2MzIgMjAuODMzNSAzOS4wNjMyWk0xOS43OTE4IDIyLjI5MjNDMTkuNzkxOCAyMS42NjczIDIwLjMxMjcgMjEuMjUwNyAyMC44MzM1IDIxLjI1MDdDMjEuMDQxOCAyMS4yNTA3IDIxLjI1MDIgMjEuMjUwNyAyMS4zNTQzIDIxLjM1NDhMMzMuMjI5MyAyOC4yMjk4QzMzLjY0NiAyOC41NDIzIDMzLjc1MDIgMjguOTU5IDMzLjc1MDIgMjkuMDYzMkMzMy43NTAyIDI5LjI3MTUgMzMuNzUwMiAyOS42ODgyIDMzLjIyOTMgMjkuODk2NUwyMS4zNTQzIDM2Ljc3MTVDMjEuMTQ2IDM2Ljg3NTcgMjEuMDQxOCAzNi44NzU3IDIwLjgzMzUgMzYuODc1N0MyMC4zMTI3IDM2Ljg3NTcgMTkuNzkxOCAzNi40NTkgMTkuNzkxOCAzNS44MzRWMjIuMjkyM1onIGZpbGw9JyNDQUNBQ0EnLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+
+.contentEditRichText_editorContainer .table-of-contents {
+  --toc-link-color: var(--ld-link1-color, #008cff);
+  --toc-base-font-size: var(--ld-text1-font-size, 1em);
+  --toc-line-height: 1;
+  --toc-max-height: 600px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 2px;
+  margin: 10px 0;
+  max-height: var(--toc-max-height);
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: #d4d4d4 transparent;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .ez-toc-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .ez-toc-title {
+  min-width: 0;
+  margin: 0;
+  word-break: break-word;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .ez-toc-title-content {
+  display: contents;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .ez-toc-title-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  line-height: 1;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .ez-toc-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--toc-arrow-color, #666666);
+  cursor: pointer;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .ez-toc-icon-toggle-span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .toc-toggle-arrow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  transform: rotate(180deg);
+}
+
+.contentEditRichText_editorContainer .table-of-contents .toc-toggle-arrow-icon svg {
+  display: block;
+  flex-shrink: 0;
+  width: 1em;
+  height: auto;
+}
+
+.contentEditRichText_editorContainer .table-of-contents.toc-is-collapsed .toc-toggle-arrow-icon {
+  transform: rotate(0deg);
+}
+
+.contentEditRichText_editorContainer .table-of-contents::-webkit-scrollbar {
+  width: 6px;
+}
+
+.contentEditRichText_editorContainer .table-of-contents::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.contentEditRichText_editorContainer .table-of-contents::-webkit-scrollbar-thumb {
+  background-color: #d4d4d4;
+  border-radius: 4px;
+  background-clip: padding-box;   
+  border: 1px solid transparent; 
+}
+
+.contentEditRichText_editorContainer .table-of-contents::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+.contentEditRichText_editorContainer .table-of-contents.toc-is-expanded nav {
+  display: block !important;
+}
+
+.contentEditRichText_editorContainer .table-of-contents.toc-is-collapsed nav {
+  display: none !important;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .ez-toc-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .ez-toc-list .ez-toc-list {
+  padding-left: 16px;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .ez-toc-page-1 {
+  margin: 0;
+  padding: 0;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .ez-toc-link {
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+  color: var(--toc-link-color);
+  font-size: var(--toc-font-size, var(--ld-text1-font-size, inherit));
+  line-height: max(1.3em, calc(var(--toc-line-height, 1) * 1em));
+  pointer-events: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .ez-toc-list .ez-toc-list .ez-toc-link {
+  font-size: var(--toc-sub-font-size, calc(var(--toc-base-font-size) - 2px));
+}
+
+@media (max-width: 1024px) {
+  .contentEditRichText_editorContainer .table-of-contents {
+    --toc-base-font-size: var(--ld-text1-pad-font-size, var(--ld-text1-font-size, 1em));
+  }
+  .contentEditRichText_editorContainer .table-of-contents .ez-toc-link {
+    font-size: var(--toc-font-size, var(--ld-text1-pad-font-size, var(--ld-text1-font-size, inherit)));
+  }
+  .contentEditRichText_editorContainer .table-of-contents .ez-toc-list .ez-toc-list .ez-toc-link {
+    font-size: var(--toc-sub-font-size, calc(var(--toc-base-font-size) - 2px));
+  }
+}
+
+.contentEditRichText_editorContainer .table-of-contents[data-list-style='bullet'] .ez-toc-link::before {
+  content: '•';
+  display: inline-block;
+  padding-right: 4px;
+}
+
+.contentEditRichText_editorContainer .table-of-contents.ez-toc-counter .ez-toc-list {
+  counter-reset: item;
+}
+
+.contentEditRichText_editorContainer .table-of-contents.ez-toc-counter .ez-toc-page-1 {
+  counter-increment: item;
+}
+
+.contentEditRichText_editorContainer .table-of-contents.ez-toc-counter .ez-toc-link::before {
+  content: counters(item, '.') ' ';
+  display: inline-block;
+  padding-right: 4px;
+}
+
+.contentEditRichText_editorContainer .table-of-contents.toc-is-bold .ez-toc-link {
+  font-weight: 700;
+}
+
+.contentEditRichText_editorContainer .table-of-contents.toc-is-italic .ez-toc-link {
+  font-style: italic;
+}
+
+.contentEditRichText_editorContainer .table-of-contents.toc-is-underline .ez-toc-link {
+  text-decoration: underline;
+}
+
+.contentEditRichText_editorContainer .table-of-contents.toc-no-italic .ez-toc-link {
+  font-style: normal;
+}
+
+.contentEditRichText_editorContainer .table-of-contents.toc-no-underline .ez-toc-link {
+  text-decoration: none;
+}
+
+.contentEditRichText_editorContainer .table-of-contents .toc-empty {
+  padding: 10px 0;
+  color: var(--rt-text-tertiary, #9ca3af);
+  font-size: 12px;
+}
+
+/* 前台：目录无任何标题条目时隐藏整个组件；编辑器内（.editor-page）保持可见 */
+.contentEditRichText_editorContainer .table-of-contents.toc-is-empty {
+  display: none !important;
+}
+
+.editor-page .contentEditRichText_editorContainer .table-of-contents.toc-is-empty {
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .contentEditRichText_editorContainer .table-of-contents {
+    --toc-base-font-size: var(--ld-text1-phone-font-size, var(--ld-text1-font-size, 1em));
+  }
+  .contentEditRichText_editorContainer .table-of-contents .ez-toc-link {
+    font-size: var(--toc-font-size, var(--ld-text1-phone-font-size, var(--ld-text1-font-size, inherit)));
+  }
+  .contentEditRichText_editorContainer .table-of-contents .ez-toc-list .ez-toc-list .ez-toc-link {
+    font-size: var(--toc-sub-font-size, calc(var(--toc-base-font-size) - 2px));
+  }
+
+  .contentEditRichText_editorContainer .table-of-contents:not(.toc-is-expanded):not(.toc-is-collapsed) nav {
+    display: none;
+  }
+
+  .contentEditRichText_editorContainer .table-of-contents.toc-is-expanded nav {
+    display: block;
+  }
+
+  .contentEditRichText_editorContainer .table-of-contents:not(.toc-is-expanded):not(.toc-is-collapsed) .toc-toggle-arrow-icon {
+    transform: rotate(0deg);
+  }
+
+  .contentEditRichText_editorContainer .table-of-contents.toc-is-expanded .toc-toggle-arrow-icon {
+    transform: rotate(180deg);
+  }
+
+  .contentEditRichText_editorContainer .table-of-contents.toc-is-expanded .ez-toc-link {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+
+
+
+/* FAQ Block (FAQPage JSON-LD) */
+.contentEditRichText_editorContainer .faq-block {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+
+.contentEditRichText_editorContainer .faq-block .faq-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.contentEditRichText_editorContainer .faq-block .faq-view-item {
+  padding: 0;
+  border: 0;
+}
+
+.contentEditRichText_editorContainer .faq-block .faq-view-title {
+  margin: 0;
+}
+
+.contentEditRichText_editorContainer .faq-block .faq-view-title::after {
+  display: block;
+  height: 0;
+  margin: 11px 0 5px;
+  border-top: 1px solid #E5E7EB;
+  content: '';
+}
+
+.contentEditRichText_editorContainer .faq-block .faq-view-content {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-title-font-size .faq-view-title {
+  font-size: var(--faq-title-font-size);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-title-line-height .faq-view-title {
+  line-height: var(--faq-title-line-height);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-title-color .faq-view-title {
+  color: var(--faq-title-color);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-title-font-weight .faq-view-title {
+  font-weight: var(--faq-title-font-weight);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-title-font-style .faq-view-title {
+  font-style: var(--faq-title-font-style);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-title-text-decoration .faq-view-title {
+  text-decoration: var(--faq-title-text-decoration);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-content-font-size .faq-view-content {
+  font-size: var(--faq-content-font-size);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-content-line-height .faq-view-content {
+  line-height: var(--faq-content-line-height);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-content-color .faq-view-content {
+  color: var(--faq-content-color);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-content-font-weight .faq-view-content {
+  font-weight: var(--faq-content-font-weight);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-content-font-style .faq-view-content {
+  font-style: var(--faq-content-font-style);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block].has-content-text-decoration .faq-view-content {
+  text-decoration: var(--faq-content-text-decoration);
+}
+
+.contentEditRichText_editorContainer .faq-block .faq-view-empty {
+  padding: 8px 0;
+  color: var(--rt-text-secondary);
+  font-size: 13px;
+}
+
+/* 产品详情新版表格缩放期间抑制原滚动；展开后移除状态类即可恢复编辑器布局。 */
+.sitewidget-proddetail .detial-cont-prodescription .contentEditRichText_editorContainer .tableWrapper.prod-detail-rich-table-zoom {
+  position: relative;
+  display: block !important;
+  overflow: hidden !important;
+  height: var(--prod-detail-table-height) !important;
+}
+
+.sitewidget-proddetail .detial-cont-prodescription .contentEditRichText_editorContainer .tableWrapper.prod-detail-rich-table-zoom > table {
+  transform: scale(var(--prod-detail-table-scale)) !important;
+  transform-origin: left top !important;
+}
+
+.sitewidget-proddetail .detial-cont-prodescription .prod-detail-rich-table-zoom > .prod-detail-rich-table-zoom-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #999;
+  cursor: pointer;
+  font-size: 42px;
+  line-height: 1;
+  z-index: 9;
+}
+
+/* Markdown 展示样式：独立前台 CSS 不依赖源码目录的 @import，与 styles/markdown.css 保持一致。 */
+.contentEditRichText_editorContainer pre[data-language]::before {
+  content: attr(data-language);
+  display: block;
+  font: 12px/1.5 monospace;
+  opacity: .65;
+  margin-bottom: 8px;
+  user-select: none;
+}
+.contentEditRichText_editorContainer .markdown-image-placeholder {
+  border: 1px dashed #c0c4cc;
+  border-radius: 4px;
+  padding: 20px;
+  color: #606266;
+  background: #f5f7fa;
+}
+.contentEditRichText_editorContainer .markdown-math-inline {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.contentEditRichText_editorContainer .markdown-math-block {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 12px 0;
+  padding: 8px 0;
+  overflow-x: auto;
+}
+.contentEditRichText_editorContainer .markdown-math-block > .katex {
+  /* 剩余空间用于居中；内容超宽时自动边距归零，公式左端仍在可滚动范围内。 */
+  flex: 0 0 auto;
+  margin-inline: auto;
+}
+.contentEditRichText_editorContainer .markdown-math math {
+  font-size: 1em;
+}
+/* Markdown 展示样式结束。 */
+
+/* 本地图片待上传节点只在序列化 HTML 中带文件名标记，编辑器 NodeView 仍保留上传入口。 */
+.contentEditRichText_editorContainer figure[data-image-block][data-local-image-name]:not([data-src]),
+.contentEditRichText_editorContainer figure[data-image-block][data-local-image-name][data-src=""] {
+  display: none !important;
+}
+
+/* FAQ 的标签仅表达语义；正文继续使用原字体字重，避免全局 H 标签强制加粗。 */
+.contentEditRichText_editorContainer .faq-block[data-faq-block] .faq-view-content {
+  font-weight: var(--ld-text1-font-weight, 400);
+}
+
+.contentEditRichText_editorContainer .faq-block[data-faq-block] .faq-view-title,
+.contentEditRichText_editorContainer .faq-block[data-faq-block] .faq-view-content {
+  min-height: 1em;
+}
+@media(max-width: 768px) {
+  /* 仅收窄表格内新增且带标记的图片块，旧图片和表格外图片保持原布局。 */
+  .contentEditRichText_editorContainer :is(td, th) .image-block[data-table-image-responsive="true"] > .html-image-inner {
+      max-width: 140px !important;
+  }
+}
